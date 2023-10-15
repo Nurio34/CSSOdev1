@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+:root {
+    --clr1 : rgb(214, 212, 109);
+    --clr2 : rgb(244, 223, 182) ;
+    --clr3 : rgb(222, 143, 95) ;
+    --clr4 : rgb(154, 68, 68) ;
+    --clr5 : #412a2a;
+    --clr6 : #531818 ;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.flex {
+    display: flex;
+}
+.j-center {
+    justify-content: center;
+}
+.j-between {
+    justify-content: space-between;
+}
+.a-center {
+    align-items: center;
+}
+.active {
+    display: inline-block;
+    transform: scale(1.2);
+    font-variant: small-caps;
+}
+
+header {
+    flex-wrap: wrap;
+    padding: 3vh 3vw;
+    row-gap: 3vh;
+    background-color: var(--clr1);
+    box-shadow: 0 0 10px 2px var(--clr3);
+}
+
+.logo {
+    font-family: 'Babylonica', cursive;
+    font-size: min(8vw,4rem);
+    font-weight: 900;
+    /* transform: rotateY(30deg); */
+    width: max-content;
+    text-decoration: none;
+    color: black;
+}
+
+.logo span {
+    font-family: monospace;
+    font-size: 0.5rem;
+    font-weight: 100;
+}
+
+.socialLinks ul {
+    gap: 3vw;
+}
+
+.companyLinks {
+    flex-grow: 1;
+}
+
+.companyLinks a {
+    color: var(--clr4);
+
+}
+
+.companyLinks ul {
+    gap: 3vw;
+    font-weight: 600;
+}
+
+main {
+    padding-block-start: 10vh;
+    padding-inline: 5vw;
+    padding-block-end: 5vh;
+    line-height: 2;
+    font-size: 1rem;
+    font-size: min(5vw,1.4rem);
+    background-color: var(--clr2);
+    color: var(--clr5);
+}
+figure {
+    order: 3;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(375 - (5vw * 2)),1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 5vw;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    border-radius: 5vw;
+}
+figcaption {
+    max-width: 70ch;
+}
+
+#about main {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--clr3);
+    color: var(--clr6);
+}
+footer .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc((1920px - 7rem) / 4),1fr));
+    justify-items: center;
+    gap: 1rem;   
+}
+
+.footer-bottom {
+    padding-block-start: 3vh;
+}
+
+
+@media (min-width:600px) {
+    main {
+        min-height: 60vh;
+    }
+    .socialLinks {
+        order: 1;
+    }
+    .companyLinks {
+        flex-grow: 0;
+        order: 0;
+    }
+
+    
+}
+
+@media (min-width:600px) {
+    figure {
+        grid-template-columns: repeat(auto-fit, minmax(610px,1fr));
+    
+    }
+}
+
